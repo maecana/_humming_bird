@@ -1,9 +1,9 @@
 #### _HUMMING_BIRD
 
-> Author: Mae Anave Caña
-> Since: 2022-10-20
-> Updated: 2022-10-20
-> Version: 1.0
+> Author: Mae Anave Caña    
+> Since: 2022-10-20    
+> Updated: 2022-10-20    
+> Version: 1.0    
 
 ##### Description: 
 - This is a program that allows user to broadcast a message and other users are able to interact with the message.
