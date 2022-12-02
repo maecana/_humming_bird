@@ -3,7 +3,7 @@ export const news = [
       category: 'Les Defier • LIVE',
       title: 'Les Defier is live on Netflix!',
       image:
-        'https://res.cloudinary.com/serial-box/image/upload/v1/asanti/production/images/qwglwlmbrfvfwmhhqkcq',
+        'https://kbimages1-a.akamaihd.net/2dabde3d-a8fa-49df-b6c2-bcf8d3c7cd13/353/569/90/False/orphan-black-the-next-chapter-episode-1.jpg',
     },
     {
       category: 'Databases • Trending',
@@ -36,7 +36,7 @@ export const whoToFollow = [
       name: 'Sarah Manning',
       handle: '@sarahmanning',
       avatar:
-        'https://static.wikia.nocookie.net/orphanblack/images/8/81/Esq-orphan-xlg-4497103.jpg/revision/latest?cb=20130401083817',
+        'https://dvdbash.files.wordpress.com/2016/07/orphan-black-s2e00-43-tatiana-maslany-sarah-manning-dvdbash.jpg',
     },
     {
       name: 'Sanity.io',
