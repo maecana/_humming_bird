@@ -47,7 +47,7 @@ export default function Feed() {
 
       {
         tweets.map((tweet, index) => (
-          <Post 
+          <Post
             key={index}
             displayName={tweet.displayName}
             username={`${tweet.username.slice(0, 5)}...${tweet.username.slice(-5)}`}

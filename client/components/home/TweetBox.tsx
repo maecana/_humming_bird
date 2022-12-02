@@ -19,44 +19,44 @@ const style = {
 }
 
 export default function TweetBox() {
-  const [tweetMessage, setTweetMessage] = useState<any|null>();
+  const [tweetMessage, setTweetMessage] = useState<any | null>();
   const postMessage = (event: any) => {
     event.preventDefault();
     console.log(tweetMessage);
   }
   return (
     <div className={style.wrapper}>
-        <div className={style.tweetBoxLeft}>
-          <img
-            src="https://i.pinimg.com/736x/dd/b2/48/ddb24864f196d5ac6a22eb79d4571efd.jpg"
-            alt="Display Picture"
-            className={style.profileImage}
-          />
-        </div>
-        <div className={style.tweetBoxRight}>
-          <form>
-            <textarea
-              className={style.inputField}
-              placeholder="What's new?"
-              value={tweetMessage}
-              onChange={(e)=>setTweetMessage(e.target.value)}
-              ></textarea>
-            <div className={style.formLowerContainer}>
-              <div className={style.iconsContainer}>
-                <BsCardImage className={style.icon} />
-                <RiFileGifLine className={style.icon} />
-                <RiBarChartHorizontalFill className={style.icon} />
-                <BsEmojiSmile className={style.icon} />
-                <IoMdCalendar className={style.icon} />
-                <MdOutlineLocationOn className={style.icon} />
-              </div>
-              <button
-                type="submit"
-                onClick={(event) => postMessage(event)}
-                className={`${style.submitGeneral} ${tweetMessage ? style.activeSubmit : style.inactiveSubmit}`}>Tweet</button>
+      <div className={style.tweetBoxLeft}>
+        <img
+          src="https://i.pinimg.com/736x/dd/b2/48/ddb24864f196d5ac6a22eb79d4571efd.jpg"
+          alt="Display Picture"
+          className={style.profileImage}
+        />
+      </div>
+      <div className={style.tweetBoxRight}>
+        <form>
+          <textarea
+            className={style.inputField}
+            placeholder="What's new?"
+            value={tweetMessage}
+            onChange={(e) => setTweetMessage(e.target.value)}
+          ></textarea>
+          <div className={style.formLowerContainer}>
+            <div className={style.iconsContainer}>
+              <BsCardImage className={style.icon} />
+              <RiFileGifLine className={style.icon} />
+              <RiBarChartHorizontalFill className={style.icon} />
+              <BsEmojiSmile className={style.icon} />
+              <IoMdCalendar className={style.icon} />
+              <MdOutlineLocationOn className={style.icon} />
             </div>
-          </form>
-        </div>
+            <button
+              type="submit"
+              onClick={(event) => postMessage(event)}
+              className={`${style.submitGeneral} ${tweetMessage ? style.activeSubmit : style.inactiveSubmit}`}>Tweet</button>
+          </div>
+        </form>
+      </div>
     </div>
   )
 }

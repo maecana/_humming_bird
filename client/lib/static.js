@@ -1,14 +1,14 @@
 export const news = [
     {
-      category: 'Clever Programmer • LIVE',
-      title: 'CP is live on YouTube!',
+      category: 'Les Defier • LIVE',
+      title: 'Les Defier is live on Netflix!',
       image:
-        'https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/themes/284832/settings_images/rLlCifhXRJiT0RoN2FjK_Logo_roundbackground_black.png',
+        'https://res.cloudinary.com/serial-box/image/upload/v1/asanti/production/images/qwglwlmbrfvfwmhhqkcq',
     },
     {
       category: 'Databases • Trending',
       title:
-        'Sanity is giving you free Boosted plan, use --coupon cleverprogrammer',
+        'Sanity is giving you free Boosted plan, use --coupon maecana',
       image: 'https://avatars.githubusercontent.com/u/17177659?s=280&v=4',
     },
     {
@@ -27,16 +27,16 @@ export const news = [
   
 export const whoToFollow = [
     {
-      name: 'Rafeh Qazi',
-      handle: '@cleverqazi',
+      name: 'Cosima Niehaus',
+      handle: '@cosimaniehaus',
       avatar:
-        'https://pbs.twimg.com/profile_images/1472075657920221184/JhAI3WGm_400x400.jpg',
+        'https://i1.sndcdn.com/artworks-000114846996-5fl6fk-t500x500.jpg',
     },
     {
-      name: 'David Rakosi',
-      handle: '@0xDavidRakosi',
+      name: 'Sarah Manning',
+      handle: '@sarahmanning',
       avatar:
-        'https://pbs.twimg.com/profile_images/1282571486465855491/98xO6N0F_400x400.jpg',
+        'https://static.wikia.nocookie.net/orphanblack/images/8/81/Esq-orphan-xlg-4497103.jpg/revision/latest?cb=20130401083817',
     },
     {
       name: 'Sanity.io',
