@@ -563,6 +563,11 @@ react-dom@18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
+react-icons@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.6.0.tgz#f83eda179af5d02c047449a20b702c858653d397"
+  integrity sha512-rR/L9m9340yO8yv1QT1QurxWQvWpbNHqVX0fzMln2HEb9TEIrQRGsqiNFQfiv9/JEUbyHmHPlNTB2LWm2Ttz0g==
+
 react@18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
@@ -657,6 +662,11 @@ tailwindcss@^3.2.1:
     postcss-value-parser "^4.2.0"
     quick-lru "^5.1.1"
     resolve "^1.22.1"
+
+timeago.js@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/timeago.js/-/timeago.js-4.0.2.tgz#724e8c8833e3490676c7bb0a75f5daf20e558028"
+  integrity sha512-a7wPxPdVlQL7lqvitHGGRsofhdwtkoSXPGATFuSOA2i1ZNQEPLrGnj68vOp2sOJTCFAQVXPeNMX/GctBaO9L2w==
 
 to-regex-range@^5.0.1:
   version "5.0.1"

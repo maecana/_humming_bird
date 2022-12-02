@@ -6,6 +6,7 @@
 > Version: 1.0    
 
 ##### Description: 
+- A Twitter Clone app.
 - This is a program that allows user to broadcast a message and other users are able to interact with the message.
 - This program also allows user to mint NFTs as their display picture.
 
@@ -20,6 +21,16 @@ Listed below are the technologies used to make this app possible
 | React | [https://reactjs.org/](https://reactjs.org/) | Front-end Use / Design |
 | Tailwind CSS | [https://tailwindcss.com/](https://tailwindcss.com/)| Front-end Use / Design |
 | Sanity | [https://www.sanity.io/](https://www.sanity.io/) | Back-end Use |
+
+## Dependencies
+- react-icons
+
+## Install Yarn
+Install yarn packages using the following command:
+- `yarn install`
+
+## Run
+Start the server with `yarn start` or `yarn start --prod` to start the production version
 
 ## License: 
 This code is licensed under the MIT License.
