@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useState } from 'react';
 import { VscTwitter } from 'react-icons/vsc';
 import { RiHome7Line, RiHome7Fill, RiFileList2Fill } from 'react-icons/ri';
@@ -18,7 +19,7 @@ import SidebarOption from './SidebarOption';
 const style = {
     wrapper: `flex-[0.7] px-8 flex flex-col`,
     twitterIconContainer: `text-3xl m-4`,
-    tweetButton: `bg-[#1d9bf0] hover:bg-[#1b8cd8] flex items-center justify-center font-bold rounded-3xl h-[50px] mt-[20px] cursor-pointer`,
+    tweetButton: `bg-[#c7206b] hover:bg-[#8a2753] flex items-center justify-center font-bold rounded-3xl h-[50px] mt-[20px] cursor-pointer`,
     navContainer: `flex-1`,
     profileButton: `flex items-center mb-6 cursor-pointer hover:bg-[#333c45]  rounded-[100px] p-2`,
     profileLeft: `flex item-center justify-center mr-4`,
@@ -44,48 +45,56 @@ function Sidebar({initialSelectedIcon = 'Home'}) {
                     Icon={selected === 'Home' ? RiHome7Fill : RiHome7Line}
                     isActive={Boolean(selected === 'Home')}
                     setSelected={setSelected}
+                    redirect={'/'}
                 />
                 <SidebarOption
                     text='Explore'
                     Icon={selected === 'Explore' ? FaHashtag : BiHash}
                     isActive={Boolean(selected === 'Explore')}
                     setSelected={setSelected}
+                    redirect={'/'}
                 />
                 <SidebarOption
                     text='Notifications'
                     Icon={selected === 'Notifications' ? FaBell : FiBell}
                     isActive={Boolean(selected === 'Notifications')}
                     setSelected={setSelected}
+                    redirect={'/'}
                 />
                 <SidebarOption
                     text='Messages'
                     Icon={selected === 'Messages' ? HiMail : HiOutlineMail}
                     isActive={Boolean(selected === 'Messages')}
                     setSelected={setSelected}
+                    redirect={'/'}
                 />
                 <SidebarOption
                     text='Bookmarks'
                     Icon={selected === 'Bookmarks' ? BsBookmarkFill : BsBookmark}
                     isActive={Boolean(selected === 'Bookmarks')}
                     setSelected={setSelected}
+                    redirect={'/'}
                 />
                 <SidebarOption
                     text='Lists'
                     Icon={selected === 'Lists' ? RiFileList2Fill : FaRegListAlt}
                     isActive={Boolean(selected === 'Lists')}
                     setSelected={setSelected}
+                    redirect={'/'}
                 />
                 <SidebarOption
                     text='Profile'
                     Icon={selected === 'Profile' ? BsPersonFill : BsPerson}
                     isActive={Boolean(selected === 'Profile')}
                     setSelected={setSelected}
+                    redirect={'/'}
                 />
                 <SidebarOption
                     text='More'
                     Icon={CgMoreO}
                     isActive={Boolean(selected === 'More')}
                     setSelected={setSelected}
+                    redirect={'/'}
                 />
                 <div className={style.tweetButton}>Mint</div>
             </div>

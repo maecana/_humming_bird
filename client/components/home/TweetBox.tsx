@@ -11,11 +11,11 @@ const style = {
   profileImage: `height-12 w-12 rounded-full`,
   inputField: `w-full h-full outline-none bg-transparent text-lg`,
   formLowerContainer: `flex`,
-  iconsContainer: `text-[#1d9bf0] flex flex-1 items-center`,
+  iconsContainer: `text-[#c7206b] flex flex-1 items-center`,
   icon: `mr-2`,
   submitGeneral: `px-6 py-2 rounded-3xl font-bold`,
-  inactiveSubmit: `bg-[#196195] text-[#95999e]`,
-  activeSubmit: `bg-[#1d9bf0] text-white`,
+  inactiveSubmit: `bg-[#5e253e] text-[#95999e]`,
+  activeSubmit: `bg-[#c7206b] text-white`,
 }
 
 export default function TweetBox() {
@@ -28,7 +28,7 @@ export default function TweetBox() {
     <div className={style.wrapper}>
       <div className={style.tweetBoxLeft}>
         <img
-          src="https://i.pinimg.com/736x/dd/b2/48/ddb24864f196d5ac6a22eb79d4571efd.jpg"
+          src="https://icons.iconarchive.com/icons/danieledesantis/playstation-flat/512/playstation-square-icon.png"
           alt="Display Picture"
           className={style.profileImage}
         />

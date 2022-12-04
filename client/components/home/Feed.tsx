@@ -5,7 +5,7 @@ import Post from '../Post';
 
 const style = {
   wrapper: `flex-[2] border-r border-l border-[#38444d]`,
-  header: `sticky top-0 bg-[#15202b] z-10 p-4 flex justify-between items-center`,
+  header: `sticky top-0 bg-[#0a0213] z-10 p-4 flex justify-between items-center`,
   headerTitle: `text-xl font-bold`,
 }
 
