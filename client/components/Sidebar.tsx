@@ -37,7 +37,7 @@ function Sidebar({initialSelectedIcon = 'Home'}) {
     return (
         <div className={style.wrapper}>
             <div className={style.twitterIconContainer}>
-                <VscTwitter />
+                <img src='/logo_white.png' width={40} />
             </div>
             <div className={style.navContainer}>
                 <SidebarOption
