@@ -87,7 +87,7 @@ function Sidebar({initialSelectedIcon = 'Home'}) {
                     Icon={selected === 'Profile' ? BsPersonFill : BsPerson}
                     isActive={Boolean(selected === 'Profile')}
                     setSelected={setSelected}
-                    redirect={'/'}
+                    redirect={'/profile'}
                 />
                 <SidebarOption
                     text='More'

@@ -3,10 +3,10 @@ import { BiSearch } from 'react-icons/bi';
 
 const style = {
     wrapper: `flex-[1] p-4`,
-    searchBar: `flex items-center bg-[#1927348f] p-2 rounded-3xl`,
+    searchBar: `flex items-center bg-[#2c30406e] p-2 rounded-3xl`,
     searchIcon: `text-[#8899a6] mr-2`,
     inputBox: `bg-transparent outline-none`,
-    section: `bg-[#1927348f] my-6 rounded-xl overflow-hidden`,
+    section: `bg-[#2c30406e] my-6 rounded-xl overflow-hidden`,
     title: `p-2 font-bold text-lg`,
     showMore: `p-2 text-[#c7206b] text-sm cursor-pointer hover:bg-[#22303c]`,
     item: `flex items-center p-3 my-2 hover:bg-[#22303c82] cursor-pointer`,
