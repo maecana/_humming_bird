@@ -1,46 +1,46 @@
 export const news = [
     {
-      category: 'Les Defier • LIVE',
-      title: 'Les Defier is live on Netflix!',
+      category: 'Orphan Black• LIVE',
+      title: 'Orphan Black is out now on Netflix!',
       image:
         'https://kbimages1-a.akamaihd.net/2dabde3d-a8fa-49df-b6c2-bcf8d3c7cd13/353/569/90/False/orphan-black-the-next-chapter-episode-1.jpg',
     },
     {
-      category: 'Databases • Trending',
+      category: 'Markets Daily • Trending',
       title:
-        'Sanity is giving you free Boosted plan, use --coupon maecana',
-      image: 'https://avatars.githubusercontent.com/u/17177659?s=280&v=4',
+        'On today’s show we’re taking a look at new research suggesting that central bank may wind up as bitcoin holders, for good reason.',
+      image: 'https://cloudfront-us-east-1.images.arcpublishing.com/coindesk/PJTR3KRDWJCRVE3QREM6KUOK7A.png',
     },
     {
-      category: 'Web3.0 • Trending',
-      title: 'Blockchain developers make over $150k',
+      category: 'Crypto News • Trending',
+      title: 'We deliver up-to-date, breaking crypto news about the latest Bitcoin, Ethereum, Blockchain, NFTs, and Altcoin trends and happenings.',
       image:
-        'https://cloudfront-us-east-1.images.arcpublishing.com/coindesk/L424HUS65FGRVFPTYYPG24CIYI.jpg',
+        'https://play-lh.googleusercontent.com/ACgOvt6MNsYoCZCsYFMsU1E_1wojlcw71xDcx46fQV6BAvMAl1S5KN5wcAYNCs4sfg',
     },
     {
-      category: 'ReactJS • Trending',
-      title: 'Join Profit with React while spots last',
+      category: 'AVATAR 2022 • Trending',
+      title: 'Jake Sully and Ney\'tiri have formed a family and are doing everything to stay together.',
       image:
-        'https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/site/18907/products/cIkAZXNyRZimRw4uqXVX_gDvYTtwQsC33KZqCtbpB_image.jpg',
+        'https://pyxis.nymag.com/v1/imgs/51b/28a/622789406b8850203e2637d657d5a0e0c3-avatar-rerelease.rsquare.w700.jpg',
     },
 ]
   
 export const whoToFollow = [
     {
-      name: 'Cosima Niehaus',
-      handle: '@cosimaniehaus',
+      name: 'Ethereum 2.0',
+      handle: '@ethereum2',
       avatar:
-        'https://i1.sndcdn.com/artworks-000114846996-5fl6fk-t500x500.jpg',
+        'https://bitcoinworld.co.in/wp-content/uploads/2020/11/Ethereum-2.0.jpg',
     },
     {
-      name: 'Sarah Manning',
-      handle: '@sarahmanning',
+      name: 'BitBoy Crypto',
+      handle: '@bitboy_crypto',
       avatar:
-        'https://dvdbash.files.wordpress.com/2016/07/orphan-black-s2e00-43-tatiana-maslany-sarah-manning-dvdbash.jpg',
+        'https://yt3.ggpht.com/ytc/AMLnZu8VlNAFVwFN31yDCJlc-AVW0rLq5SBdxl97wDM_yw=s900-c-k-c0x00ffffff-no-rj',
     },
     {
-      name: 'Sanity.io',
-      handle: '@sanity_io',
-      avatar: 'https://avatars.githubusercontent.com/u/17177659?s=280&v=4',
+      name: 'Vitalik Buterin',
+      handle: '@vitalik_buterin',
+      avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk9dcpLNRwxQBwLSqvwN5krsM9jJw0nkHE3A&usqp=CAU',
     },
 ]
