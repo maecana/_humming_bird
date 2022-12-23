@@ -7,10 +7,10 @@ module.exports = {
     hardhat: {
       chainId: 1337, // Chain ID for the Ganache
     },
-    ganache: {
-      url: "http://127.0.0.1:7545", // Ganache Network
+    georli: {
+      url: "https://eth-goerli.g.alchemy.com/v2/8jEf5MciWc655WKfLJdXmLfdi190DwT2", // Georli Network
       accounts: [
-        `6fef471928f26aa19093a135a9f93b659dcb42ff4eecd3324ec42ab549cbf1bd`,  // Ganache Account - 01
+        `3817187a463e460923d4569bed57b978d34697fe0b7aa28b073079a7f94d613d`,  // Ganache Account - 01
       ],
     }
   },
