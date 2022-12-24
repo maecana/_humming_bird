@@ -4,10 +4,7 @@ require("@nomicfoundation/hardhat-toolbox");
 module.exports = {
   solidity: "0.8.9",
   networks: {
-    hardhat: {
-      chainId: 1337, // Chain ID for the Ganache
-    },
-    georli: {
+    goerli: {
       url: "https://eth-goerli.g.alchemy.com/v2/8jEf5MciWc655WKfLJdXmLfdi190DwT2", // Georli Network
       accounts: [
         `3817187a463e460923d4569bed57b978d34697fe0b7aa28b073079a7f94d613d`,  // Ganache Account - 01

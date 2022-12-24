@@ -1,3 +1,16 @@
 {
-  "name": "hardhat-project"
+  "name": "Humming-Bird",
+  "devDependencies": {
+    "hardhat": "^2.12.4"
+  },
+  "dependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "@openzeppelin/contracts": "^4.8.0"
+  },
+  "version": "1.0.0",
+  "description": "A Twitter Clone app. This is a program that allows user to broadcast a message and other users are able to interact with the message. This program also allows user to mint NFTs as their display picture.",
+  "main": "scripts/deploy.js",
+  "repository": "https://github.com/maecana/_humming_bird",
+  "author": "Mae Anave Caña",
+  "license": "MIT"
 }
