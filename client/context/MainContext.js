@@ -45,6 +45,7 @@ export const MainProvider = ({ children }) => {
             });
 
             if(wallet_addresses.length > 0) {
+                setAppStatus('connected');
                 setCurrentWalletAddress(wallet_addresses[0]);
             } else {
                 router.push('/');
