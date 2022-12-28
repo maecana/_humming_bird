@@ -35,6 +35,7 @@ Listed below are the technologies used to make this app possible
 - alchemy-sdk
 - @nomicfoundation/hardhat-toolbox
 - @openzeppelin/contracts
+- @sanity/client
 
 
 ## Install Yarn
