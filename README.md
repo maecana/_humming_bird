@@ -21,7 +21,7 @@ Listed below are the technologies used to make this app possible
 | NextJS | [https://nextjs.org/](https://tailwindcss.com/) | Front-end Use / Design |
 | Tailwind CSS | [https://tailwindcss.com/](https://tailwindcss.com/)| Front-end Use / Design |
 | ReactJS | [https://reactjs.org/](https://reactjs.org/) | Front-end Use / Design |
-| Sanity | [https://www.sanity.io/](https://www.sanity.io/) | Back-end Use |
+| Sanity | [https://www.sanity.io/](https://www.sanity.io/) | Back-end Use and Studio |
 | Hardhat | [https://hardhat.org/](https://hardhat.org/) | Smart Contract Framework |
 | Ganache | [https://trufflesuite.com/ganache/](https://trufflesuite.com/ganache/) | Local Blockchain |
 | Metamask | [https://metamask.io/](https://metamask.io/) | Crypto Wallet and Gateway |
@@ -40,11 +40,24 @@ Listed below are the technologies used to make this app possible
 
 ## Install Yarn
 Install yarn packages using the following command:
-- `yarn install`
+- Go to `client`folder: `cd client`
+- Install: `yarn install`
+- Go to `stidio`folder: `cd studio`
+- Install: `yarn install`
 
 
-## Run
-Start the server with `yarn start` or `yarn start --prod` to start the production version
+## Run the Client
+Start the client server by going to `client` folder and running `development` / `production` environment
+- `cd client/`
+- `yarn run dev` or `yarn run prod`
+- Go to `http://localhost:3000/`
+
+
+## Run Sanity Studio
+Start the studio by going to `studio` folder and starting sanity
+- `cd studio/`
+- `sanity start` 
+- Go to `http://localhost:3333/`
 
 
 ## Smart Contracts
