@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { useRouter } from 'next/router';
+import { client } from '../lib/client';
 
 export const MainContext = createContext();
 
@@ -24,6 +25,7 @@ export const MainProvider = ({ children }) => {
             if (wallet_addresses.length > 0) {
                 setAppStatus('connected');
                 setCurrentWalletAddress(wallet_addresses[0]);
+                createBirdAccount(wallet_addresses[0]);
             } else {
                 router.push('/');
                 setAppStatus('not-connected');
@@ -32,6 +34,7 @@ export const MainProvider = ({ children }) => {
             setAppStatus('error');
         }
     };
+
 
     // Initialize Metamask Wallet Connection
     const wallectConnect = async () => {
@@ -47,6 +50,7 @@ export const MainProvider = ({ children }) => {
             if(wallet_addresses.length > 0) {
                 setAppStatus('connected');
                 setCurrentWalletAddress(wallet_addresses[0]);
+                createBirdAccount(wallet_addresses[0]);
             } else {
                 router.push('/');
                 setAppStatus('not-connected');
@@ -56,6 +60,29 @@ export const MainProvider = ({ children }) => {
             setAppStatus('error');
         }
     };
+
+
+    const createBirdAccount = async(walletAddress = currentWalletAddress) => {
+        if (!window.ethereum) return setAppStatus('no-metamask-found');
+
+        try {
+            const userDoc = {
+                _type: 'birds',
+                _id: walletAddress,
+                name: 'Unknown',
+                isProfileImageNFT: false,
+                profileImage: '',
+                walletAddress: walletAddress,
+            };
+
+            await client.createIfNotExists(userDoc);
+            setAppStatus('connected');
+        } catch(error) {
+            router.push('/');
+            setAppStatus('error');
+        }
+    };
+    
 
     return (
         <MainContext.Provider value={{ appStatus, currentWalletAddress, wallectConnect }}>
