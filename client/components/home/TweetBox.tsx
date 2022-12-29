@@ -4,6 +4,9 @@ import { RiFileGifLine, RiBarChartHorizontalFill } from 'react-icons/ri';
 import { IoMdCalendar } from 'react-icons/io';
 import { MdOutlineLocationOn } from 'react-icons/md';
 
+import { MainContext } from '../../context/MainContext';
+import { client } from '../../lib/client';
+
 const style = {
   wrapper: `px-4 flex flex-row border-b border-[#38444d] pb-4`,
   tweetBoxLeft: `mr-4`,
@@ -20,10 +23,42 @@ const style = {
 
 export default function TweetBox() {
   const [tweetMessage, setTweetMessage] = useState<any | null>();
-  const postMessage = (event: any) => {
+  const { currentWalletAddress } = useContext(MainContext);
+  
+  const postMessage = async (event: any) => {
     event.preventDefault();
-    console.log(tweetMessage);
+
+    if (!tweetMessage) return;
+
+    const tweetId = `${currentWalletAddress}_${Date.now()}`;
+    const tweetDoc = {
+      _type: 'hums',
+      _id: tweetId,
+      hum: tweetMessage,
+      timestamp: new Date(Date.now()).toISOString(),
+      bird: {
+        _key: tweetId,
+        _type: 'reference',
+        _ref: currentWalletAddress,
+      }
+    }
+
+    await client.createIfNotExists(tweetDoc);
+    await client.patch(currentWalletAddress)
+      .setIfMissing({ hums: [] })
+      .insert('after', 'hums[-1]', [
+        {
+          _key: tweetId,
+          _type: 'reference',
+          _ref: tweetId
+        }
+      ])
+      .commit();
+    
+    setTweetMessage('');
   }
+
+
   return (
     <div className={style.wrapper}>
       <div className={style.tweetBoxLeft}>
