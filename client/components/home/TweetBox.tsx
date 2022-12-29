@@ -22,8 +22,8 @@ const style = {
 }
 
 export default function TweetBox() {
-  const [tweetMessage, setTweetMessage] = useState<any | null>();
-  const { currentWalletAddress } = useContext(MainContext);
+  const [ tweetMessage, setTweetMessage ] = useState<any | null>();
+  const { currentWalletAddress, currentUserDetails} = useContext(MainContext);
   
   const postMessage = async (event: any) => {
     event.preventDefault();
@@ -63,9 +63,9 @@ export default function TweetBox() {
     <div className={style.wrapper}>
       <div className={style.tweetBoxLeft}>
         <img
-          src="https://icons.iconarchive.com/icons/danieledesantis/playstation-flat/512/playstation-square-icon.png"
+          src={currentUserDetails.profileImage}
           alt="Display Picture"
-          className={style.profileImage}
+          className={currentUserDetails.isProfileImageNFT ? `${style.profileImage} smallHex` : style.profileImage}
         />
       </div>
       <div className={style.tweetBoxRight}>

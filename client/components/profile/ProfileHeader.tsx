@@ -1,5 +1,8 @@
 import { useRouter } from 'next/router';
+import { useContext } from 'react';
 import { BsArrowLeftShort } from 'react-icons/bs';
+
+import { MainContext } from '../../context/MainContext';
 
 const style = {
   wrapper: `border-[#38444d] border-b`,
@@ -20,8 +23,7 @@ const style = {
 
 export default function ProfileHeader() {
   const router = useRouter();
-  const isProfileImageNft = false;
-  const currentAccount = '0x6b2bB56245628862EC9426527ae80bAee7f0bbe2';
+  const { currentWalletAddress, currentUserDetails } = useContext(MainContext);
   
   return (
     <div className={style.wrapper}>
@@ -32,28 +34,40 @@ export default function ProfileHeader() {
         </div>
 
         <div className={style.details}>
-          <div className={style.primary}>maecana_official</div>
-          <div className={style.secondary}>4 Tweets</div>
+          <div className={style.primary}>
+            {
+              currentUserDetails.name === 'Unknown' ?
+                currentUserDetails.name : 
+                `${currentWalletAddress.slice(0, 5)}...${currentWalletAddress.slice(-5)}`
+            }
+          </div>
+          <div className={style.secondary}>{currentUserDetails.hums?.length} Tweet{currentUserDetails.hums?.length > 1 ? `s` : ``}</div>
         </div>
       </div>
 
       <div className={style.coverPhotoContainer}>
-        <img src="/banner4.jpg" className={style.coverPhoto} alt="Cover" />
+        <img src={currentUserDetails.coverImage} className={style.coverPhoto} alt="Cover" />
       </div>
 
       <div className={style.profileImageContainer}>
-        <div className={isProfileImageNft ? 'hex' : style.profileImageContainer}>
+        <div className={currentUserDetails.isProfileImageNft ? 'hex' : style.profileImageContainer}>
             <img
-              src="https://icons.iconarchive.com/icons/danieledesantis/playstation-flat/512/playstation-square-icon.png"
+              src={currentUserDetails.profileImage}
               alt="Display Picture"
-              className={isProfileImageNft ? style.profileImageNft : style.profileImage}
+              className={currentUserDetails.isProfileImageNft ? style.profileImageNft : style.profileImage}
             />
         </div>
       </div>
 
       <div className={style.details}>
-        <div className={style.primary}>maecana_official</div>
-        <div className={style.secondary}>{currentAccount && `@${currentAccount.slice(0, 5)}...${currentAccount.slice(-5)}`}</div>
+        <div className={style.primary}>
+          {
+            currentUserDetails.name === 'Unknown' ?
+              currentUserDetails.name : 
+              `@${currentWalletAddress.slice(0, 5)}...${currentWalletAddress.slice(-5)}`
+          }
+        </div>
+        <div className={style.secondary}>{currentWalletAddress && `@${currentWalletAddress.slice(0, 5)}...${currentWalletAddress.slice(-5)}`}</div>
       </div>
 
       <div className={style.nav}>

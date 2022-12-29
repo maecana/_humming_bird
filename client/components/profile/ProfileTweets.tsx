@@ -1,4 +1,8 @@
-import Post from "../Post"
+import { useContext } from 'react';
+
+import { MainContext } from '../../context/MainContext';
+import Post from "../Post";
+
 
 const style = {
     wrapper: `no-scrollbar`,
@@ -6,45 +10,24 @@ const style = {
     headerTitle: `text-xl font-bold`,
 }
 
-const tweets = [
-    {
-      displayName: 'maecana_official',
-      username: '0x6b2bB56245628862EC9426527ae80bAee7f0bbe2',
-      avatar: `https://icons.iconarchive.com/icons/danieledesantis/playstation-flat/512/playstation-square-icon.png`,
-      text: 'Resolution on a computer monitor is determined by how many horizontal and vertical lines are being created by the video output system of the computer. As the lines of resolution increases the size of the objects on the screen decreases. You may design your Web site based on a resolution of 1024X768 but you cannot know how the user has set the lines of resolution on her or his computer.  There resolution setting can change the size of all the text and images you put on your page. All you can do is make an assumption that most people will be using the factory preset.',
-      isProfileImageNft: false,
-      timestamp: '2022-02-12T07:56:00.000Z'
-    },
-    {
-      displayName: 'maecana_official',
-      username: '0x6b2bB56245628862EC9426527ae80bAee7f0bbe2',
-      avatar: `https://icons.iconarchive.com/icons/danieledesantis/playstation-flat/512/playstation-square-icon.png`,
-      text: 'Bonjour!',
-      isProfileImageNft: false,
-      timestamp: '2022-12-02T8:56:00.000Z'
-    },
-    {
-      displayName: 'maecana_official',
-      username: '0x6b2bB56245628862EC9426527ae80bAee7f0bbe2',
-      avatar: `https://icons.iconarchive.com/icons/danieledesantis/playstation-flat/512/playstation-square-icon.png`,
-      text: 'Hello!',
-      isProfileImageNft: false,
-      timestamp: '2022-12-02T8:56:00.000Z'
-    }
-]
-
 export default function ProfileTweets() {
+  const { currentWalletAddress, currentUserDetails } = useContext(MainContext);
+
   return (
     <div className={style.wrapper}>
-        {tweets?.map((tweet, index) => (
+        {currentUserDetails.hums?.map((hum: any, index: number) => (
             <Post
                 key={index}
-                displayName={tweet.displayName}
-                username={`${tweet.username.slice(0, 5)}...${tweet.username.slice(-5)}`}
-                avatar={tweet.avatar}
-                text={tweet.text}
-                isProfileImageNft={tweet.isProfileImageNft}
-                timestamp={tweet.timestamp} />
+                displayName={
+                  currentUserDetails.name == 'Unknown'
+                    ? `${currentWalletAddress.slice(0, 5)}...${currentWalletAddress.slice(-5)}`
+                    : currentUserDetails.name
+                }
+                username={`${currentWalletAddress.slice(0, 5)}...${currentWalletAddress.slice(-5)}`}
+                avatar={currentUserDetails.profileImage}
+                text={hum.hum}
+                isProfileImageNft={hum.isProfileImageNft}
+                timestamp={hum.timestamp} />
         ))}
     </div>
   )
