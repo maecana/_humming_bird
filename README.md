@@ -36,6 +36,7 @@ Listed below are the technologies used to make this app possible
 - @nomicfoundation/hardhat-toolbox
 - @openzeppelin/contracts
 - @sanity/client
+- react-modal
 
 
 ## Install Yarn
