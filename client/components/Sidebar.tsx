@@ -12,10 +12,27 @@ import {
     BsPerson,
     BsPersonFill,
 } from 'react-icons/bs';
+import Modal from 'react-modal';
 
 import SidebarOption from './SidebarOption';
+import ProfileImageMinter from './modals/MintingModal/ProfileImageMinter';
 import { MainContext } from '../context/MainContext';
 
+const modalStyle = {
+    content: {
+      top: '30%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      transform: 'translate(-50%, -50%)',
+      backgroundColor: '',
+      padding: 0,
+      border: 'none',
+    },
+    overlay: {
+      backgroundColor: '#334250a7',
+    },
+}
 
 const style = {
     wrapper: `flex-[0.7] px-8 flex flex-col`,
@@ -121,6 +138,15 @@ function Sidebar({initialSelectedIcon = 'Home'}) {
                     </div>
                 </div>
             </div>
+
+
+            <Modal
+                isOpen={Boolean(router.query.mint)}
+                onRequestClose={() => { router.back() }}
+                style={modalStyle}
+            >
+                <ProfileImageMinter />
+            </Modal>
         </div>
     )
 }
