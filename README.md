@@ -26,6 +26,7 @@ Listed below are the technologies used to make this app possible
 | Ganache | [https://trufflesuite.com/ganache/](https://trufflesuite.com/ganache/) | Local Blockchain |
 | Metamask | [https://metamask.io/](https://metamask.io/) | Crypto Wallet and Gateway |
 | Alchemy | [https://www.alchemy.com/](https://www.alchemy.com/) | Web3 Development Platform |
+| Pinata | [https://www.pinata.cloud/](https://www.pinata.cloud/) | Web3 Media Management |
 
 
 ## Dependencies
@@ -37,6 +38,8 @@ Listed below are the technologies used to make this app possible
 - @openzeppelin/contracts
 - @sanity/client
 - react-modal
+- react-spinners
+- @emotions/react
 
 
 ## Install Yarn
