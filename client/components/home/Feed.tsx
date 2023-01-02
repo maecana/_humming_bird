@@ -33,7 +33,7 @@ export default function Feed() {
             username={`${hum.bird.walletAddress.slice(0, 5)}...${hum.bird.walletAddress.slice(-5)}`}
             avatar={hum.bird.profileImage}
             text={hum.hum}
-            isProfileImageNft={hum.isProfileImageNft}
+            isProfileImageNft={hum.bird.isProfileImageNft}
             timestamp={hum.timestamp}
           />
         ))
