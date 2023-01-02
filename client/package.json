@@ -6,12 +6,16 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
     "@sanity/client": "^3.4.1",
+    "axios": "^1.2.2",
+    "ethers": "^5.7.2",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.6.0",
     "react-modal": "^3.16.1",
+    "react-spinners": "^0.13.7",
     "timeago.js": "^4.0.2"
   },
   "devDependencies": {

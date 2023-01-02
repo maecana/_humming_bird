@@ -27,9 +27,10 @@ Listed below are the technologies used to make this app possible
 | Metamask | [https://metamask.io/](https://metamask.io/) | Crypto Wallet and Gateway |
 | Alchemy | [https://www.alchemy.com/](https://www.alchemy.com/) | Web3 Development Platform |
 | Pinata | [https://www.pinata.cloud/](https://www.pinata.cloud/) | Web3 Media Management |
+| OpeanSea - TestNet | [https://testnets.opensea.io/](https://testnets.opensea.io/) | Marketplace for NFTs (TestNet) |
 
 
-## Dependencies
+## Packages/Dependencies
 - react-icons
 - timeago.js
 - hardhat
@@ -40,12 +41,15 @@ Listed below are the technologies used to make this app possible
 - react-modal
 - react-spinners
 - @emotions/react
+- axios
+- ethers
 
 
 ## Install Yarn
 Install yarn packages using the following command:
 - Go to `client`folder: `cd client`
-- Install: `yarn install`
+- Yarn Install: `yarn install`
+- NPM Install: `npm install`
 - Go to `stidio`folder: `cd studio`
 - Install: `yarn install`
 
