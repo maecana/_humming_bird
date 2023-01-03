@@ -74,7 +74,7 @@ const ProfileImageMinter: NextPage = () => {
             .set({isProfileImageNFT: true})
             .commit();
         
-        const imageMetadata = {
+        const imageMetadata: Metadata = {
             name: name,
             description: description,
             image: `ipfs://${IPFSImageHash}`,
