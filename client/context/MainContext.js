@@ -92,7 +92,16 @@ export const MainProvider = ({ children }) => {
         }
     };
     
+
+    const getNftProfileImage = async (imageUri, isNft) => {
+        if (isNft) {
+          return `https://gateway.pinata.cloud/ipfs/${imageUri}`
+        } else if (!isNft) {
+          return imageUri
+        }
+    }
     
+
     const fetchHums = async () => {
         const query = `
             *[_type == 'hums'] {
@@ -106,6 +115,11 @@ export const MainProvider = ({ children }) => {
         setHums([]);
 
         sanityResponse.forEach(async (items) => {
+            const profileImageUrl = await getNftProfileImage(
+                items.bird.profileImage,
+                items.bird.isProfileImageNft,
+            )
+
             const newItem = {
                 hum: items.hum,
                 timestamp: items.timestamp,
@@ -113,7 +127,7 @@ export const MainProvider = ({ children }) => {
                 name: items.bird.name,
                 walletAddress: items.bird.walletAddress,
                 isProfileImageNFT: items.bird.isProfileImageNFT,
-                profileImage: items.bird.profileImage,
+                profileImage: profileImageUrl,
                 }
             };
             setHums(hums => [...hums, newItem]);
@@ -136,10 +150,16 @@ export const MainProvider = ({ children }) => {
         `;
 
         const sanityResponse = await client.fetch(query);
+        
+        const profileImageUri = await getNftProfileImage(
+            sanityResponse[0].profileImage,
+            sanityResponse[0].isProfileImageNft,
+        )
+
         setCurrentUserDetails({
             hums: sanityResponse[0].hums,
             name: sanityResponse[0].name,
-            profileImage: sanityResponse[0].profileImage,
+            profileImage: profileImageUri,
             isProfileImageNFT: sanityResponse[0].isProfileImageNFT,
             coverImage: sanityResponse[0].coverImage,
             walletAddress: sanityResponse[0].walletAddress
@@ -154,9 +174,11 @@ export const MainProvider = ({ children }) => {
                 currentWalletAddress,
                 hums,
                 currentUserDetails,
+                setAppStatus,
                 wallectConnect,
                 fetchHums,
-                getCurrentUserDetails
+                getCurrentUserDetails,
+                getNftProfileImage
             }
         }>
             {children}
