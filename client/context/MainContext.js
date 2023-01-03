@@ -117,17 +117,17 @@ export const MainProvider = ({ children }) => {
         sanityResponse.forEach(async (items) => {
             const profileImageUrl = await getNftProfileImage(
                 items.bird.profileImage,
-                items.bird.isProfileImageNft,
-            )
+                items.bird.isProfileImageNFT,
+            );
 
             const newItem = {
                 hum: items.hum,
                 timestamp: items.timestamp,
                 bird: {
-                name: items.bird.name,
-                walletAddress: items.bird.walletAddress,
-                isProfileImageNFT: items.bird.isProfileImageNFT,
-                profileImage: profileImageUrl,
+                    name: items.bird.name,
+                    walletAddress: items.bird.walletAddress,
+                    isProfileImageNFT: items.bird.isProfileImageNFT,
+                    profileImage: profileImageUrl,
                 }
             };
             setHums(hums => [...hums, newItem]);
@@ -153,9 +153,9 @@ export const MainProvider = ({ children }) => {
         
         const profileImageUri = await getNftProfileImage(
             sanityResponse[0].profileImage,
-            sanityResponse[0].isProfileImageNft,
+            sanityResponse[0].isProfileImageNFT,
         )
-
+            
         setCurrentUserDetails({
             hums: sanityResponse[0].hums,
             name: sanityResponse[0].name,
