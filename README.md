@@ -43,6 +43,7 @@ Listed below are the technologies used to make this app possible
 - @emotions/react
 - axios
 - ethers
+- dotenv
 
 
 ## Install Yarn
@@ -72,7 +73,7 @@ Start the studio by going to `studio` folder and starting sanity
 Compile and deploy all the existing smart contracts in the `/smart_contracts/contracts/` folder.
 - Go to Folder: `cd smart_contracts/`
 - Compile: `yarn hardhat compile`
-- Deploy: `yarn hardhat run scripts/deploy.js --network georli`
+- Deploy: `yarn hardhat run scripts/deploy.js --network goerli`
 
 
 ## License: 
