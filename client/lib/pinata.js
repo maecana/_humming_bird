@@ -11,7 +11,8 @@ export const pinJSONtoIPFS = async (json) => {
         .post(url, json, {
             headers: {
                 pinata_api_key: key,
-                pinata_secret_api_key: key
+                pinata_secret_api_key: secret,
+                'Content-Type': 'application/json',
             }
         })
         .then((res) => {
