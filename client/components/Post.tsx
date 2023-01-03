@@ -3,8 +3,9 @@ import { FaRegComment, FaRetweet } from 'react-icons/fa';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { FiShare } from 'react-icons/fi';
 import { format } from 'timeago.js';
-import { useState } from 'react';
-import { time } from 'console';
+import { useEffect, useContext } from 'react';
+
+import { MainContext } from '../context/MainContext';
 
 const style = {
   wrapper: `flex p-3 border-b border-[#38444d]`,
@@ -35,11 +36,18 @@ export default function Post({
     isProfileImageNft: boolean,
     timestamp: string
 }) {
+  const { getCurrentUserDetails, currentUserDetails } = useContext(MainContext);
+  
+  useEffect(() => {
+    if (currentUserDetails) return;
+    getCurrentUserDetails()
+  }, [currentUserDetails])
+
   return (
     <div className={style.wrapper}>
         <div>
             <img
-                src={avatar}
+                src={currentUserDetails.profileImage}
                 alt={username}
                 className={isProfileImageNft ? `${style.profileImage} smallHex` : style.profileImage}
             />

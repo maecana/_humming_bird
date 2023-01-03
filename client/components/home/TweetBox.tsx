@@ -1,4 +1,4 @@
-import { useState, useContext, MouseEvent } from 'react';
+import { useState, useContext } from 'react';
 import { BsCardImage, BsEmojiSmile } from 'react-icons/bs';
 import { RiFileGifLine, RiBarChartHorizontalFill } from 'react-icons/ri';
 import { IoMdCalendar } from 'react-icons/io';

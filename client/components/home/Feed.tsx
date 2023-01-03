@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { BsStars } from 'react-icons/bs';
 import TweetBox from './TweetBox';
 import Post from '../Post';
@@ -33,7 +33,7 @@ export default function Feed() {
             username={`${hum.bird.walletAddress.slice(0, 5)}...${hum.bird.walletAddress.slice(-5)}`}
             avatar={hum.bird.profileImage}
             text={hum.hum}
-            isProfileImageNft={hum.bird.isProfileImageNft}
+            isProfileImageNft={hum.bird.isProfileImageNFT}
             timestamp={hum.timestamp}
           />
         ))
