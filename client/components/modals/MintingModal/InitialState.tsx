@@ -35,16 +35,11 @@ const InitialState = ({
   setName,
   setDescription,
 }: InitialStateProps) => {
-  console.log(profileImage)
-
   return (
     <div className={style.wrapper}>
       <div className={style.inputFieldsContainer}>
         <div className={style.inputContainer}>
-          <label
-            htmlFor='image-upload'
-            className={profileImage ? style.fileSelected : style.customInput}
-          >
+          <label htmlFor='image-upload' className={profileImage ? style.fileSelected : style.customInput}>
             <input
               type='file'
               id='image-upload'
@@ -53,7 +48,7 @@ const InitialState = ({
               placeholder='Image URL'
               onChange={e => setProfileImage(e.target.files![0])}
             />
-            Select File
+            {profileImage ? `Replace File` : `Select File`}
           </label>
         </div>
         <div className={style.inputContainer}>
