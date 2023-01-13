@@ -16,7 +16,6 @@ const style = {
   walletConnectButton: `text-xl text-black bg-white font-bold mb-[-2rem] mt-[2rem] px-6 py-4 rounded-full cursor-pointer hover:bg-[#d7dbdc]`,
 
   header: `sticky top-0 z-[1] w-screen h-28 flex items-center justify-center relative`,
-  footer: `absolute z-10 flex justify-left items-center p-10 bottom-0 inset-x-0 h-30 w-3/4 left-[50%] translate-x-[-50%]`,
   
   grid: `text-left w-64 pb-6 text-neutral-500`,
   lines: `border-neutral-500 w-40 border-solid m-4`,
@@ -75,12 +74,14 @@ const Home: NextPage = () => {
   )
 
   const _footer = (
-    <div className={style.footer}>
-      <div className={`${style.verticalLine} bottom-0 h-16`}></div>
-      <div>
-        <div className='flex justify-left items-center mb-3'><h1 className='font-bold text-neutral-300 text-xl'>01</h1> <hr className={style.lines}  /></div>
-        <div className={style.grid}>
-          <p>A flock of hummingbirds can be referred to as a bouquet, a glittering, a hover, a shimmer, or a tune.</p>
+    <div className='absolute bottom-0 z-[1] h-30 w-screen flex items-center justify-center'>
+      <div className='w-2/3'>
+        <div className={`${style.verticalLine} h-16 bottom-0`}></div>
+        <div className='px-10'>
+          <div className='flex justify-left items-center mb-3'><h1 className='font-bold text-neutral-300 text-xl'>01</h1> <hr className={style.lines}  /></div>
+          <div className={style.grid}>
+            <p>A flock of hummingbirds can be referred to as a bouquet, a glittering, a hover, a shimmer, or a tune.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -116,9 +117,9 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-
       {_footer}
-      {/* {_watermark} */}
+
+      {_watermark}
     </>
   )
 
